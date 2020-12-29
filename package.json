@@ -1,12 +1,20 @@
 {
   "name": "tsboiler",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.ts",
   "author": "menonu",
   "license": "MIT",
+  "scripts": {
+    "run": "node dist/main.js",
+    "build": "tsc",
+    "watch:build": "tsc -w",
+    "watch:run": "ts-node-dev --respawn -- src/main.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "devDependencies": {
-    "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
     "typescript": "^4.1.3"
   }
 }
